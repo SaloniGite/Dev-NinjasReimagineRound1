@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width:600px) {
+    .nav h2{
+        display: initial;
+    }
+    .nav h1{
+        display: none;
+    }
+}
+
+.sidebar{
+    transition: all ease-in 0.8s;
+}
+
+.nav h1{
+    cursor: pointer;
+}
+
+.sidebar h1{
+    cursor: pointer;
+}
+
+.mySwiper2 .swiper-wrapper .swiper-slide img{
+    border-radius: 25px;
+}
+
+.slide1{
+    background-image: url(https://gmedia.playstation.com/is/image/SIEPDC/Elden-Ring-Shadow-of-the-Erdtree-background-desktop-01-en-01mar24?$2400px$);
+    background-position: center;
+    background-size: cover;
+}
+
+.slide2{
+    background-image: url(https://gmedia.playstation.com/is/image/SIEPDC/elder-scrolls-online-gold-road-hero-desktop-01-en-14may24?$2400px$);
+    background-position: center;
+    background-size: cover;
+}
+
+.slide3{
+    background-image: url(https://gmedia.playstation.com/is/image/SIEPDC/FFXIV-Dawntrail-homepage-hero-desktop-01-en-27jun24?$2400px$);
+    background-position: center;
+    background-size: cover;
+}
+
+.slide4{
+    background-image: url(https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/6zhGBKQpPrlLNI2a7EfALNs1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.slide5{
+    background-image: url(https://i.pinimg.com/564x/6e/b1/62/6eb16289144f8bd5f2eb89c5b73668e2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.slide6{
+    background-image: url(https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/bo6/Store_BO6PDP_Hero.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.show:hover{
+    border: 3px solid gray;
+    box-shadow: 0px 0px 15px black;
+}
+
+.btns:hover{
+    box-shadow: 0px 0px 10px white;
+}
+
+.back{
+    background-image: url(https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg);
+    background-size: cover;
+}
+
+.card1:hover{
+    border: 3px solid white;
+    border-radius: 25px;
+    background-color: rgb(57, 55, 54);
+}
+
+.show2:hover{
+    box-shadow: 0px 0px 15px white;
+}
