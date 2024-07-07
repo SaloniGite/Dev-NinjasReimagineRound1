@@ -487,6 +487,7 @@
   
     .hello{
       font-size: 6vh;
+      padding: 4px;
     }
   
   .footer a:hover{
@@ -539,3 +540,24 @@
     bottom: 0;
     z-index: 1;
   }
+
+
+
+  .tt{
+    font-size: 70px;
+    
+  
+      color:rgba(0, 0, 0, 0.788); 
+      text-shadow: 
+        -1px -1px 0 #fff7f7,  
+        1px -1px 0 #ffffff,  
+        -1px 1px 0 #fff9f9,  
+        1px 1px 0 #ffffff; 
+    font-weight: 600;
+    font-family: Gilroy;
+     
+  }
+  
+  
+  
+
