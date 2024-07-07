@@ -3,6 +3,9 @@ var side = document.querySelector(".sidebar");
 var aler = document.querySelector(".alert");
 var close = document.querySelector(".close");
 var junebox = document.querySelector(".junebox");
+var cursor = document.querySelector(".cursor");
+var main = document.querySelector(".main");
+var body = document.querySelector("body");
 
 const games = [
     {
@@ -35,7 +38,6 @@ const games = [
     }
 ];
 
-
 var flag = 0
 
 menu.addEventListener("click",function(){
@@ -67,3 +69,97 @@ games.forEach(function(e){
 })
 
 junebox.innerHTML = container;
+
+var tl = gsap.timeline()
+
+tl.from(".logos",{
+    y:50,
+    duration:1,
+    delay:0.5,
+    opacity:0,
+})
+
+tl.from(".part1",{
+    y:50,
+    duration:1,
+    delay:0.5,
+    opacity:0,
+    stagger: 0.2
+})
+
+tl.from(".part2 h1,.part2 img",{
+    y:50,
+    duration:1,
+    delay:0.5,
+    opacity:0,
+    stagger: 0.2
+})
+
+gsap.to(".Product-b  .Product",{
+    x:"-140%",
+    scrollTrigger:{
+        trigger:".Product-b",
+        scroller:"body",
+        start:"top -5%",
+        end:"top -280%",
+        scrub:3,
+        pin:true,
+        duration:2
+    }
+})
+
+body.addEventListener("mousemove",function(e){
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+})
+
+var game_pass = document.querySelector(".Game-Pass");
+var gp = document.querySelector(".GP");
+var game = document.querySelector(".Games");
+var gameD = document.querySelector(".GameD");
+var Support = document.querySelector(".Support");
+var SupportD = document.querySelector(".SupportD");
+var Store = document.querySelector(".Store");
+var StoreD = document.querySelector(".StoreD");
+var Devices = document.querySelector(".Devices");
+var DevicesD = document.querySelector(".DevicesD");
+
+function showElement(element) {
+    element.classList.remove("hidden");
+}
+
+function hideElement(element) {
+    element.classList.add("hidden");
+}
+
+function setupHover(trigger, target) {
+    let timer;
+    
+    trigger.addEventListener('mouseenter', function() {
+        clearTimeout(timer);
+        showElement(target);
+    });
+
+    trigger.addEventListener('mouseleave', function() {
+        timer = setTimeout(function() {
+            hideElement(target);
+        }, 100); // Short delay to allow mouse to move between elements
+    });
+
+    target.addEventListener('mouseenter', function() {
+        clearTimeout(timer);
+        showElement(target);
+    });
+
+    target.addEventListener('mouseleave', function() {
+        timer = setTimeout(function() {
+            hideElement(target);
+        }, 100); // Short delay to allow mouse to move between elements
+    });
+}
+
+setupHover(gp, game_pass);
+setupHover(gameD, game);
+setupHover(StoreD, Store);
+setupHover(SupportD, Support);
+setupHover(DevicesD, Devices);
